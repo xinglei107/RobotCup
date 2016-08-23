@@ -1,0 +1,152 @@
+.manage{
+	width:790px;
+	float:left;
+	height:auto;
+	overflow:hidden;
+	margin-left:10px;
+}
+.manage .manage_title{
+	background: url("../../images/bar1.png") repeat;
+	height:30px; 
+	line-height:30px; 
+	padding-left:15px; 
+	color:#ffffff; 
+	font-size:14px; 
+	position:relative;
+	margin-top:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+}
+.manage .manage_content{
+	background-color: white;
+	height:640px;
+	overflow:hidden;
+	margin-top:5px;
+	padding-bottom:10px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+	background-color: #F1FEDD;
+}
+.manage_content .selected{
+	width:760px;
+	height:250px;
+	overflow:auto;
+	margin: 10px;
+	padding-bottom:20px;
+}
+.manage_content .selected,.selectable ul{
+	list-style: none;
+}
+.manage_content .selected table{
+	width:680px;
+	margin-left: 25px;
+	font-size:13px;
+	border:2px solid orange;
+}
+.manage_content .selected table td,th{
+	text-align: center;
+	padding-left:5px;
+	padding-right:5px;
+	border-top: 1px dashed orange;
+}
+.manage_content .selected table td.borderright,th.borderright{
+	border-right: 1px solid orange;
+}
+.manage_content .selected ul li{
+	list-style: none;
+	float:left;
+	margin-left: 20px;
+	margin-top:10px;
+	border:2px solid rgb(200,200,200);
+	padding-right: 10px;
+	background-color: white;
+}
+.manage_content .selected ul li a{
+	text-decoration: none;
+	color:blue;
+}
+.manage_content .selected ul li a:hover{
+	text-decoration: underline;
+}
+a.label{
+	padding-left: 15px;
+}
+a.close{
+	padding-left: 5px;
+}
+.manage_content .selectable{
+	width:780px;
+	padding-bottom: 50px;
+	margin: 10px;
+}
+.manage_content .selectable .itemtype{
+	width:200px;
+	float:left;
+	border:3px solid orange;
+	background:white;
+	text-align: right;
+	padding: 10px;
+}
+.manage_content .selectable .itemtype ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.manage_content .selectable .itemtype ul li a{
+	text-decoration: none;
+	color: blue;
+}
+.manage_content .selectable .itemtype ul li a:hover{
+	text-decoration: underline;
+	color: orange;
+}
+.manage_content .selectable .ok{
+	margin-top: 20px;
+	padding-left: 10px;
+	float: none;
+}
+.manage_content .selectable .ok input{
+	width:230px;
+	border:1px solid rgb(150,150,150);
+	height:30px;
+	padding-top:3px;
+	margin-left:10px;
+}
+.manage_content .selectable .ok button{
+	width:100px;
+	height:30px;
+}
+#itemdiv{
+	width:550px;
+	float: left;
+}
+#itemdiv table{	
+	margin: 0px;
+	margin-top: 10px;
+	margin-left: 130px;
+}
+#itemdiv table tr td{	
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+#itemdiv table tr td a{
+	width:auto;
+	text-decoration: none;
+	color:rgb(50,50,50);
+	background-color: white;
+	border:2px solid rgb(200,200,200);
+	font-size:11px;
+	text-align: center;
+	line-height:30px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 9px;
+	padding-right: 9px;
+}
+#itemdiv table tr td a:hover{
+	border:2px solid blue;
+}

@@ -1,0 +1,91 @@
+/*设置网站头的格式*/
+.headtitle{
+	width:1000px;
+	height:150px;
+	position:relative;
+	left:50%;
+	margin-left:-500px;
+	background:url("../images/head/logo-.gif") no-repeat 5px 5px; 
+	
+	background-color: #0180CF;
+}
+/*网站右上角链接的格式*/
+.headtitle  a.alogin{	
+	float:right;
+	height:20px;
+	font-size: 12px;
+	color: white;
+	margin-right:10px;
+	margin-top:3px;
+	text-decoration:none;
+}
+/*网站右上角链接鼠标移入加下划线*/
+.headtitle a.alogin:HOVER{
+	text-decoration:underline;
+}
+/**/
+.headtitle ul{
+	float:left;
+	margin:0px;
+	padding: 0px;
+	margin-top: 110px;
+}
+/**/
+.headtitle li{
+	float:left;
+	width:88px;
+	height: 40px;
+	display:block;/*不显示小圆点*/
+	line-height: 40px;
+	overflow:hidden;
+	text-align:center;
+}
+/*菜单的字体大小和颜色*/
+.headtitle li a{
+	float:left;
+	width:100%; 
+	height:100%;
+	font-size:15px;
+	color:#FFFFFF;
+	text-align:center;
+	text-decoration:none;
+	background:url("../images/head/rect-blue-96-1.png") no-repeat -5px -18px; 
+}
+/*鼠标移入时的事件*/
+.headtitle li a:hover{
+	background:url("../images/head/rect-blue-96-1-mei.png") no-repeat -5px -18px; 
+}
+/*菜单被选中时的事件*/
+.headtitle li a.selected{
+	color:blue;
+	background:url("../images/head/rect-blue-96-1-mei.png") no-repeat -5px -18px;
+}
+.inputWithImge{
+	width:180px;
+	height:25px;
+	background-color:rgb(241,254,221);
+	float:right;
+	padding-left:3px;
+	position:relative;
+	margin-top:95px;
+	margin-right:15px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+}
+.inputWithImge input,.searchinput{
+	font-size:12px;
+	width:150px;
+	float:left;
+	padding-top: 4px;
+	border:0px;
+	color:rgb(100,100,100);
+	background-color:rgb(241,254,221);
+}
+
+.inputWithImge a img{
+	width:24px;
+	height:24px;
+	border: 0px;
+}

@@ -1,0 +1,110 @@
+.article{
+	width:740px;
+	height:auto;
+	float:left;
+	margin-top: 5px;
+	position: relative;
+}
+.article .articletitle{
+	width:100%;
+	height:30px;
+	background:url(../images/bar.gif) repeat;
+	text-align:center;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+}
+.article .articletitle .title{
+	color:white;
+	font-size:14px;
+	line-height:30px;
+	float:left;
+	margin-left: 20px;
+}
+.article .articlecontent{	
+	width:100%;
+	height:auto;
+	min-height:450px;
+	background: url(../images/blackwhite.png) repeat;
+	margin-top: 5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+}
+.articlecontent .download{
+	width:100%;
+	height:auto;
+	text-align:center;
+	font-size:13px;
+}
+.articlecontent .download a{
+	color:red;
+}
+.articlecontent .download a:hover{
+	color:blue;
+}
+.articlebottom{
+	width:741px;
+	height:20px;
+	background: url(../images/tail.gif) left bottom no-repeat;
+	margin-top: -6px;
+}
+.articlebottom div{
+	width:30px;
+	height:20px;
+	float:right;
+	background: url(../images/tail.gif) right bottom no-repeat;
+}
+.articlecontent h3{
+	color:rgb(100,100,100);
+	text-align: center;
+}
+.articlecontent h5{
+	color:rgb(150,150,150);
+	text-align: center;
+}
+.articlecontent p{
+	color:rgb(50,50,50);
+	padding-left: 70px;
+	padding-right: 70px;
+}
+.articlecontent p img{
+	clear:none;
+	width:100%;	
+	margin-top: 10px;
+}
+
+
+/*下面是分页的格式*/
+div.sabrosus {
+	text-align: center;
+	width:100%;
+	height: auto;
+}
+div.sabrosus a {
+	position:relative;
+	margin-top: 5px;
+	border: #9aafe5 1px solid; 
+	padding-right: 5px;
+	padding-left: 5px;  
+	padding-top: 2px; 
+	color: #2e6ab1; 
+	text-decoration: none;
+}
+div.sabrosus a:hover {
+	border: #2b66a5 1px solid;
+	color: #000; 
+	background-color: #017ECE;
+}
+
+div.sabrosus a.current {
+	border: navy 1px solid; 
+	padding-right: 5px; 
+	padding-left: 5px; 
+	padding-top: 2px; 
+	font-weight: bold;
+	color: white; 
+	background-color: #017ECE;
+}

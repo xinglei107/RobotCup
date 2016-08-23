@@ -1,0 +1,62 @@
+.tailtop{
+	width:1000px;
+	height: 90px;
+	margin: 0 auto;
+	position:relative;
+	left:50%;
+	margin-left:-500px;
+	margin-top:10px;
+	background-color: #F1FEDD;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	o-border-radius:5px;
+	border-radius:5px;
+}
+.tailtop .topleft,.topcenter,.topright{
+	text-align: center;
+	width:300px;	
+	margin-top: 5px;
+}
+.tailtop .topleft{
+	float:left;
+	margin-left: 10px;
+}
+.tailtop .topcenter{
+	float:left;
+	margin-left: 40px;
+}
+.tailtop .topright{
+	float:right;	
+	margin-right: 10px;
+}
+.tailtop .toptitle{
+	font-size:13px;
+	color:rgb(100,100,100);
+	text-align: center;
+	width: 100%;
+}
+.tailtop .toplink table {
+	font-size:12px;
+	width: 100%;
+}
+.tailtop .toplink table a{
+	color:rgb(125,125,125);
+	text-decoration:none;
+}
+.tailtop .toplink table a:hover{
+	color:blue;
+	text-decoration:underline;
+}
+.tailtop .toplink table tr.row{
+	width: 100%;
+}
+.tailtop .toplink table td.col{
+	width: 50%;
+}
+.tailtop .topsplit{
+	height:80px;
+	width:2px;
+	float:left;
+	background-color: rgb(200,200,200);
+	margin-top: 5px;
+}

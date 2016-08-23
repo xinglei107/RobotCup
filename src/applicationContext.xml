@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd  
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd  
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+<!-- 启用注解扫描 -->
+<context:annotation-config/>
+
+<!-- 配置数据源 -->
+<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+	    <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+	    <property name="url" value="jdbc:oracle:thin:@10.1.100.133:1521:Orcl"/>
+	    <property name="username" value="ROBOT"/>
+	    <property name="password" value="xl15210498191"/>
+	     <!-- 连接池启动时的初始值 -->
+		<property name="initialSize" value="10"/>
+	 	<!-- 连接池的最大值 -->
+	 	<property name="maxActive" value="100"/> 
+ 		<!-- 最大空闲值.当经过一个高峰时间后，连接池可以慢慢将已经用不到的连接慢慢释放一部分，一直减少到maxIdle为止 -->
+		<property name="maxIdle" value="2"/>
+		<!--  最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请 -->
+		<property name="minIdle" value="1"/>
+</bean>
+<!-- 配置会话工厂() -->
+<bean id="sessionFactory"  class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+     <!-- 设置数据源 -->
+     <property name="dataSource" ref="dataSource"/>
+     <!-- 接管了hibernate对象映射文件 -->
+     <property name="mappingResources">
+	    <list>
+	      	<value>com/robotcup/domain/ItemsType.hbm.xml</value>
+	      	<value>com/robotcup/domain/RobotAttachment.hbm.xml</value>
+			<value>com/robotcup/domain/RobotLetter.hbm.xml</value>
+			<value>com/robotcup/domain/RobotNews.hbm.xml</value>
+			<value>com/robotcup/domain/TeamAdmin.hbm.xml</value>
+			<value>com/robotcup/domain/TeamApplication.hbm.xml</value>
+			<value>com/robotcup/domain/TeamArea.hbm.xml</value>
+			<value>com/robotcup/domain/TeamItems.hbm.xml</value>
+			<value>com/robotcup/domain/TeamLetter.hbm.xml</value>
+			<value>com/robotcup/domain/TeamMembers.hbm.xml</value>
+			<value>com/robotcup/domain/TeamUnversity.hbm.xml</value>
+			<value>com/robotcup/domain/TeamUser.hbm.xml</value>
+	    </list>
+     </property>
+     <property name="hibernateProperties">
+	    <value>
+	        	hibernate.dialect=org.hibernate.dialect.OracleDialect
+	        	hibernate.hbm2ddl.auto=update
+				hibernate.show_sql=false
+				hibernate.cache.use_second_level_cache=true
+        	    hibernate.generate_statistics=true	
+	 </value>
+    </property>
+</bean>
+<!-- 配置service对象 -->
+<bean id="hibernateHelper" class="com.robotcup.util.HibernateHelper">
+	<property name="sessionFactory" ref="sessionFactory"></property>
+</bean>
+<bean id="teamManageServiceImp" class="com.robotcup.service.imp.TeamManageServiceImp"/>
+<bean id="executeQueryImp" class="com.robotcup.service.imp.ExecuteQueryImp"/>
+<bean id="publishServiceImp" class="com.robotcup.service.imp.PublishServiceImp"/>
+<bean id="teamAdminServiceImp" class="com.robotcup.service.imp.TeamAdminServiceImp"/>
+<!-- 配置action -->
+<bean name="/loginAndout" class="com.robotcup.struts.action.LoginAndOutAction"/>
+<bean name="/updateTeamInfo" class="com.robotcup.struts.action.UpdateTeamInfoAction"/>
+<bean name="/register" class="com.robotcup.struts.action.RegisterAction"/>
+<bean name="/justJump" class="com.robotcup.struts.action.JustJumpAction"/>
+<bean name="/updateTeamItems" class="com.robotcup.struts.action.UpdateTeamItemsAction"/>
+<bean name="/updateTeamMember" class="com.robotcup.struts.action.UpdateTeamMemberAction"/>
+<bean name="/updatePassword" class="com.robotcup.struts.action.UpdatePasswordAction"/>
+<bean name="/manageTeams" class="com.robotcup.struts.action.ManageTeamsAction"/>
+<bean name="/addTeamMember" class="com.robotcup.struts.action.AddTeamMemberAction"/>
+<bean name="/publish" class="com.robotcup.struts.action.PublishAction"/>
+<bean name="/articleShow" class="com.robotcup.struts.action.ArticleShowAction"/>
+<bean name="/more" class="com.robotcup.struts.action.MoreAction"/>
+<bean name="/exportExcel" class="com.robotcup.struts.action.ExportExcelAction"/>
+<bean name="/articleManage" class="com.robotcup.struts.action.ArticleManageAction"/>
+<bean name="/manageApplication" class="com.robotcup.struts.action.ManageApplicationAction"/>
+<bean name="/changePwd" class="com.robotcup.struts.action.ChangePwdAction"/>
+<bean name="/index" class="com.robotcup.struts.action.IndexAction"/>
+<bean name="/manageCom" class="com.robotcup.struts.action.ManageComAction"/>
+<bean name="/addArea" class="com.robotcup.struts.action.AddAreaAction"/>
+<bean name="/addUnversity" class="com.robotcup.struts.action.AddUnversityAction"/>
+<bean name="/addType" class="com.robotcup.struts.action.AddTypeAction"/>
+<bean name="/addItem" class="com.robotcup.struts.action.AddItemAction"/>
+<bean name="/addAdmin" class="com.robotcup.struts.action.AddAdminAction"/>
+<bean name="/redirect" class="com.robotcup.struts.action.RedirectAction"/>
+<bean name="/updateArticle" class="com.robotcup.struts.action.UpdateArticleAction"/>
+<bean name="/publishLetter" class="com.robotcup.struts.action.PublishLetterAction"/>
+<bean name="/indexImage" class="com.robotcup.struts.action.IndexImageAction"/>
+<bean name="/manageImage" class="com.robotcup.struts.action.ManageImageAction"/>
+<bean name="/report" class="com.robotcup.struts.action.ReportAction"/>
+<bean name="/updateAdminInfo" class="com.robotcup.struts.action.UpdateAdminInfoAction"/>
+
+<!-- 配置事务管理器，统一管理sessionFactory的事务 -->
+<bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+  	<property name="sessionFactory" ref="sessionFactory"/>
+</bean>
+<!-- 启用事务注解 -->
+<tx:annotation-driven transaction-manager="txManager"/>
+</beans>

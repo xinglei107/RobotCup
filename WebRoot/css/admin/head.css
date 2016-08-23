@@ -1,0 +1,92 @@
+.adminhead{
+	width:1000px;
+	height:150px;
+	position:relative;
+	left:50%;
+	margin-left: -500px;
+	background:url("../../images/bar1.png") repeat; 
+}
+.adminhead .thetop{
+	height:20px;
+}
+.adminhead .thetop a{
+	float:right;
+	font-size:12px;
+	text-decoration: none;
+	color:white;
+	margin-right: 10px;
+	line-height: 20px;
+}
+.adminhead .thetop a:hover{
+	text-decoration: underline;
+}
+.adminhead .themiddle div span{
+	color:rgb(250,250,250);
+	height:40px;
+	line-height: 40px;
+	font-size:14px;
+	margin-left: 50px;
+}
+.adminhead .themiddle div span a{
+	color:orange;
+	text-decoration: none;	
+	font-size:18px;
+}
+.adminhead .themiddle div span a:hover{
+	text-decoration: underline;
+}
+.adminhead .themiddle .info{
+	height:20px;
+	margin-top: 10px;
+}
+.adminhead .themiddle .info ul{
+	margin: 0px;
+	padding: 0px;
+	padding-left:150px;
+}
+.adminhead .themiddle .info ul li{
+	list-style:none;
+	color:rgb(250,250,250);
+	float:left;
+	margin-left:50px;
+}
+.adminhead .thebottom{	
+	height:35px;
+	margin-top:18px;
+	+margin-top:20px;
+}
+.adminhead .thebottom ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.adminhead .thebottom ul li{
+	float:left;
+	width:88px;
+	height: 40px;
+	display:block;/*不显示小圆点*/
+	line-height: 40px;
+	overflow:hidden;
+	text-align:center;
+}
+.adminhead .thebottom ul li a{
+	float:left;
+	width:100%; 
+	height:100%;
+	font-size:15px;
+	color:#FFFFFF;
+	text-align:center;
+	text-decoration:none;
+	background:url("../../images/head/rect-blue-96-1.png") no-repeat -5px -18px; 
+}
+.adminhead .thebottom ul li a:hover{
+	background:url("../../images/head/rect-blue-96-1-mei.png") no-repeat -5px -18px; 
+}
+.adminhead .thebottom ul li a.on{
+	background:url("../../images/head/rect-blue-96-1-mei.png") no-repeat -5px -18px; 
+}
+
+
+
+
+

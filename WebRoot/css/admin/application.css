@@ -1,0 +1,64 @@
+.application{
+	width:795px;
+	height:650px;
+	background-color:white;
+	float:left;
+	margin-left:5px;
+	margin-top:5px;
+	overflow:hidden;
+}
+.application .operate{
+	height:50px;
+}
+.application .operate button{
+	margin-top: 10px;
+	float:right;
+	margin-right:20px;
+	height:35px;
+	font-size:13px;
+	width:180px;
+}
+.application .operate .option{
+	margin-top: 10px;
+	float:left;
+	margin-left:20px;
+	font-size:13px;
+	width:380px;
+}
+.application .operate .option select{
+	width:80px;
+	font-size:14px;
+}
+.application table{
+	width:100%;
+	border:1px solid #8DB2E3;
+}
+.application table tr th{
+	margin: 0px;
+	padding: 0px;
+	border:1px solid #8DB2E3;
+	background:#BED1ED
+}
+.application table tr td{
+	font-size:12px;
+	border-top:1px solid #8DB2E3;
+}
+.application table tr.over td{
+	background:#EEECEB;
+}
+.application table tr.alt td{
+	background:#BED1ED;
+}
+.application table tr td a{
+	font-size:13px;
+	text-decoration: none;
+	color:blue;
+}
+.application table tr td a.del{
+	font-size:13px;
+	text-decoration: none;
+	color:orange;
+}
+.application table tr td a:hover{
+	text-decoration: underline;
+}

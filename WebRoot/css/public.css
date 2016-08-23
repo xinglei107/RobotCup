@@ -1,0 +1,19 @@
+input,textarea,span,p,button{
+	font-family:"Microsoft YaHei",Î¢ÈíÑÅºÚ;
+}
+body{
+	margin: 0;
+	background-color: rgb(217,217,217);
+	font-family:"Microsoft YaHei",Î¢ÈíÑÅºÚ;
+}
+form{
+	margin: 0px;
+	padding: 0px;
+}
+.publicpanel{	
+	width:1000px;
+	position:relative;
+	left:50%;
+	margin-left:-500px;
+	overflow:hidden;
+}

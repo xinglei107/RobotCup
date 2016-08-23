@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+  <form-beans >
+    <form-bean name="teamUserForm" type="com.robotcup.struts.form.TeamUserForm" />
+    <form-bean name="teamMemberForm" type="com.robotcup.struts.form.TeamMemberForm" />
+    <form-bean name="articleForm" type="com.robotcup.struts.form.ArticleForm" />
+    <form-bean name="teamAreaForm" type="com.robotcup.struts.form.TeamAreaForm" />
+    <form-bean name="teamUnversityForm" type="com.robotcup.struts.form.TeamUnversityForm" />
+    <form-bean name="itemsTypeForm" type="com.robotcup.struts.form.ItemsTypeForm" />
+    <form-bean name="teamItemsForm" type="com.robotcup.struts.form.TeamItemsForm" />
+    <form-bean name="teamAdminForm" type="com.robotcup.struts.form.TeamAdminForm" />
+    <form-bean name="letterForm" type="com.robotcup.struts.form.LetterForm" />
+    <form-bean name="indexImageForm" type="com.robotcup.struts.form.IndexImageForm" />
+    <form-bean name="adminInfoForm" type="com.robotcup.struts.form.AdminInfoForm" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    
+    
+    <action
+      attribute="articleForm"
+      name="articleForm"
+      path="/publish"
+      scope="request"
+      type="com.robotcup.struts.action.PublishAction"
+      cancellable="true">
+      <forward name="show" path="/WEB-INF/admin/manage-article.jsp" />
+      
+      
+    </action>
+    <action
+      parameter="method"
+      path="/justJump"
+      type="com.robotcup.struts.action.JustJumpAction"
+      validate="false"
+      cancellable="true" >
+      
+      
+      <forward name="index" path="/WEB-INF/index.jsp" />
+      <forward name="baseinfo" path="/WEB-INF/teamuser/team_baseinfo.jsp" />
+      <forward name="changepwd" path="/WEB-INF/teamuser/change_pwd.jsp" />
+      <forward name="letterlist" path="/WEB-INF/teamuser/letter_list.jsp" />
+      <forward name="lettershow" path="/WEB-INF/teamuser/letter_show.jsp" />
+      <forward name="publish" path="/WEB-INF/admin/publish-article.jsp" />
+      <forward name="prepublish" path="/WEB-INF/admin/preview-article.jsp" />
+      <forward name="managenews" path="/WEB-INF/admin/manage-article.jsp" />
+      
+      
+      <forward name="adminchangepwd" path="/WEB-INF/admin/changepwd.jsp" />
+      <forward name="uai" path="/WEB-INF/admin/baseinfo.jsp" />
+      
+      
+      
+    </action>
+    <action
+      attribute="teamUserForm"
+      name="teamUserForm"
+      parameter="method"
+      path="/updateTeamInfo"
+      scope="request"
+      type="com.robotcup.struts.action.UpdateTeamInfoAction"
+      cancellable="true">
+      <forward name="showbaseinfo" path="/WEB-INF/teamuser/team_baseinfo.jsp" />
+      <forward name="updatebaseinfo" path="/WEB-INF/teamuser/team_baseinfo_updata.jsp" />
+      
+    </action>
+    <action
+      attribute="teamUserForm"
+      name="teamUserForm"
+      parameter="method"
+      path="/loginAndout"
+      scope="request"
+      type="com.robotcup.struts.action.LoginAndOutAction"
+      cancellable="true">
+      
+      
+      <forward name="fail" path="/WEB-INF/login.jsp" />
+      <forward name="success" path="/WEB-INF/teamuser/team_baseinfo.jsp" />
+      <forward name="logout" path="/index.do" />
+      <forward name="area" path="/WEB-INF/admin/manage-area.jsp" />
+      
+    </action>
+    <action
+      attribute="teamUserForm"
+      name="teamUserForm"
+      path="/register"
+      scope="request"
+      type="com.robotcup.struts.action.RegisterAction"
+      cancellable="true" >
+      <forward name="success" path="/WEB-INF/teamuser/team_baseinfo.jsp" />
+      <forward name="fail" path="/WEB-INF/register.jsp" />
+    </action>
+    <action
+      attribute="teamMemberForm"
+      name="teamMemberForm"
+      parameter="method"
+      path="/updateTeamMember"
+      scope="request"
+      type="com.robotcup.struts.action.UpdateTeamMemberAction"
+      cancellable="true">
+      <forward name="updatemember" path="/WEB-INF/teamuser/member_update.jsp" />
+      <forward name="showmember" path="/WEB-INF/teamuser/member_show.jsp" />
+    </action>
+    <action
+      parameter="method"
+      path="/updateTeamItems"
+      type="com.robotcup.struts.action.UpdateTeamItemsAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="show" path="/WEB-INF/teamuser/item_show.jsp" />
+    </action>
+    <action
+      parameter="method"
+      path="/manageTeams"
+      type="com.robotcup.struts.action.ManageTeamsAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="showteams" path="/WEB-INF/admin/report-team.jsp" />
+      
+      
+    </action>
+    <action
+      path="/updatePassword"
+      type="com.robotcup.struts.action.UpdatePasswordAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="fail" path="/WEB-INF/teamuser/change_pwd.jsp" />
+      <forward name="success" path="/WEB-INF/login.jsp" />
+    </action>
+    <action
+      attribute="teamMemberForm"
+      name="teamMemberForm"
+      path="/addTeamMember"
+      scope="request"
+      type="com.robotcup.struts.action.AddTeamMemberAction"
+      cancellable="true" >
+      <forward name="showmember" path="/WEB-INF/teamuser/member_show.jsp" />
+      <forward name="fail" path="/WEB-INF/teamuser/member_update.jsp" />
+    </action>
+    <action
+      parameter="method"
+      path="/articleShow"
+      type="com.robotcup.struts.action.ArticleShowAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="show" path="/WEB-INF/show-article.jsp" />
+    </action>
+    <action
+      path="/download"
+      type="com.robotcup.struts.action.DownloadAction"
+      validate="false"
+      cancellable="true" />
+    <action
+      parameter="method"
+      path="/more"
+      type="com.robotcup.struts.action.MoreAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="showlist" path="/WEB-INF/article-list.jsp" />
+      <forward name="attslist" path="/WEB-INF/atts-list.jsp" />
+    </action>
+    <action
+      parameter="method"
+      path="/exportExcel"
+      type="com.robotcup.struts.action.ExportExcelAction"
+      validate="false"
+      cancellable="true" >
+      
+    </action>
+
+    <action
+      parameter="method"
+      path="/articleManage"
+      type="com.robotcup.struts.action.ArticleManageAction"
+      validate="false"
+      cancellable="true">
+      <forward name="show" path="/WEB-INF/admin/manage-article.jsp" />
+      <forward name="update" path="/WEB-INF/admin/update-article.jsp" />
+    </action>
+    <action
+      parameter="method"
+      path="/manageApplication"
+      type="com.robotcup.struts.action.ManageApplicationAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="ok" path="/WEB-INF/admin/report-application.jsp" />
+      
+    </action>
+    <action
+      path="/changePwd"
+      type="com.robotcup.struts.action.ChangePwdAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="fail" path="/WEB-INF/admin/changepwd.jsp" />
+      <forward name="success" path="/WEB-INF/login.jsp" />
+      
+    </action>
+    <action
+      path="/index"
+      type="com.robotcup.struts.action.IndexAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="index" path="/WEB-INF/index.jsp" />
+    </action>
+    <action
+      parameter="method"
+      path="/manageCom"
+      type="com.robotcup.struts.action.ManageComAction"
+      validate="false"
+      cancellable="true" >
+      
+      <forward name="school" path="/WEB-INF/admin/manage-school.jsp" />
+      <forward name="type" path="/WEB-INF/admin/manage-type.jsp" />
+      <forward name="item" path="/WEB-INF/admin/manage-item.jsp" />
+      <forward name="area" path="/WEB-INF/admin/manage-area.jsp" />
+      <forward name="admin" path="/WEB-INF/admin/manage-admin.jsp" />
+    </action>
+    <action
+      attribute="teamAreaForm"
+      name="teamAreaForm"
+      path="/addArea"
+      scope="request"
+      type="com.robotcup.struts.action.AddAreaAction"
+      cancellable="true" >
+      <forward name="ok" path="/WEB-INF/admin/manage-area.jsp" />
+    </action>
+
+    <action
+      attribute="teamUnversityForm"
+      name="teamUnversityForm"
+      path="/addUnversity"
+      scope="request"
+      type="com.robotcup.struts.action.AddUnversityAction"
+      cancellable="true" >
+      <forward name="ok" path="/WEB-INF/admin/manage-school.jsp" />
+    </action>
+
+    <action
+      attribute="itemsTypeForm"
+      name="itemsTypeForm"
+      path="/addType"
+      scope="request"
+      type="com.robotcup.struts.action.AddTypeAction"
+      cancellable="true" >
+      <forward name="ok" path="/WEB-INF/admin/manage-type.jsp" />
+    </action>
+
+    <action
+      attribute="teamItemsForm"
+      name="teamItemsForm"
+      path="/addItem"
+      scope="request"
+      type="com.robotcup.struts.action.AddItemAction"
+      cancellable="true" >
+      <forward name="ok" path="/WEB-INF/admin/manage-item.jsp" />
+    </action>
+    <action
+      attribute="teamAdminForm"
+      name="teamAdminForm"
+      path="/addAdmin"
+      scope="request"
+      type="com.robotcup.struts.action.AddAdminAction"
+      cancellable="true" >
+      <forward name="ok" path="/WEB-INF/admin/manage-admin.jsp" />
+    </action>
+    <action
+      path="/reLogin"
+      type="com.robotcup.struts.action.ReLoginAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="relogin" path="/WEB-INF/login.jsp" />
+    </action>
+    <action
+      parameter="method"
+      path="/redirect"
+      type="com.robotcup.struts.action.RedirectAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="login" path="/WEB-INF/login.jsp" />
+      <forward name="reg" path="/WEB-INF/register.jsp" />
+    </action>
+    <action
+      attribute="articleForm"
+      name="articleForm"
+      path="/updateArticle"
+      scope="request"
+      type="com.robotcup.struts.action.UpdateArticleAction"
+      cancellable="true" >
+      <forward name="show" path="/WEB-INF/admin/manage-article.jsp" />
+    </action>
+    <action
+      attribute="letterForm"
+      name="letterForm"
+      parameter="method"
+      path="/publishLetter"
+      scope="request"
+      type="com.robotcup.struts.action.PublishLetterAction"
+      cancellable="true">
+      <forward name="show" path="/WEB-INF/admin/show-letter.jsp" />
+      <forward name="publish" path="/WEB-INF/admin/publish-letter.jsp" />
+    </action>
+    <action
+      attribute="indexImageForm"
+      name="indexImageForm"
+      path="/indexImage"
+      scope="request"
+      type="com.robotcup.struts.action.IndexImageAction"
+      cancellable="true" >
+      <forward name="ok" path="/WEB-INF/admin/manage-index.jsp" />
+    </action>
+    <action
+      parameter="method"
+      path="/manageImage"
+      type="com.robotcup.struts.action.ManageImageAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="show" path="/WEB-INF/admin/manage-index.jsp" />
+    </action>
+    <action
+      parameter="method"
+      path="/report"
+      type="com.robotcup.struts.action.ReportAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="showiteminfo" path="/WEB-INF/admin/report-item.jsp" />
+    </action>
+    <action
+      attribute="adminInfoForm"
+      name="adminInfoForm"
+      path="/updateAdminInfo"
+      scope="request"
+      type="com.robotcup.struts.action.UpdateAdminInfoAction"
+      cancellable="true" >
+      <forward name="ok" path="/WEB-INF/admin/baseinfo.jsp" />
+    </action>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+  </action-mappings>
+  <!-- 配置请求处理器,就是把action的创建交给spring容器处理 -->
+  	<controller>
+ 		<set-property property="processorClass" value="org.springframework.web.struts.DelegatingRequestProcessor"/>
+	</controller> 
+  <message-resources parameter="com.robotcup.struts.ApplicationResources" />
+</struts-config>
+

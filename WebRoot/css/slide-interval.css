@@ -1,0 +1,168 @@
+.review{ 
+	width:1000px;
+	margin:0 auto;
+	position:relative;
+	left:50%;
+	margin-left:-500px;
+	margin-top: 5px;
+	height: 200px;
+}
+.review .title { 
+	background:url(../images/review/bar.gif) repeat;
+	height:32px; 
+	line-height:30px; 
+	padding-left:15px; 
+	color:#ffffff; 
+	font-size:14px; 
+	position:relative;
+	-webkit-border-radius: 5px; /*以下四句控制div圆角*/
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px; 
+	border-radius: 5px;
+}
+.review .title a.left{
+	font-size: 14px;
+	text-decoration: none;
+	color:white;
+	float: left;
+}
+.review .title a.left:hover{
+	text-decoration: underline;
+}
+.review .title a.right{
+	font-size: 10px;
+	text-decoration: none;
+	color:white;
+	float: right;
+	height:20px;
+	margin-top:5px;
+	margin-right: 10px;
+}
+.review .title a.right:hover{
+	text-decoration: underline;
+}
+.review .flip{
+	overflow:hidden;
+	float:left;
+}
+#trigger{
+	float:left; 
+	position:relative; 	
+	margin-left: 15px;
+}
+#trigger a{
+	background:url(../images/direction/white.png) no-repeat; 
+	width:8px;
+	height:8px; 
+	display:inline-block; 
+	overflow:hidden;
+	margin-right:5px;
+	margin-top: 13px;
+}
+#trigger a:hover{
+	background:url(../images/direction/shenlan.png) no-repeat ; 
+}
+#trigger a.current{ 
+	background:url(../images/direction/qianhuang.png) no-repeat ; 
+}
+.review .next,.review .prev{
+	width:16px;
+	height:16px; 
+	overflow:hidden; 
+	display:block;
+	float:left; 
+	margin-top: 10px;
+}
+.review .next{ 
+	background:url(../images/direction/right-white-16.png) no-repeat;
+}
+.review .next:hover{ 
+	background:url(../images/direction/right-yellow-16.png) no-repeat;
+}
+.review .prev{
+	background:url(../images/direction/left-white-16.png) no-repeat;
+}
+.review .prev:hover{
+	background:url(../images/direction/left-yellow-16.png) no-repeat;
+}
+.review .profld{
+	margin:0px; 
+	margin-top: 5px;
+	position:relative; 
+	overflow:hidden;
+	background-color: #F1FEDD;
+	-webkit-border-radius: 5px; /*以下四句控制div圆角*/
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px; 
+	border-radius: 5px;
+}
+.list-none{ 
+	list-style:none; 
+	padding:0px; 
+	margin:0px;
+	margin-top: 5px;
+}
+.review ol{ 
+	position: absolute; 
+	width: 2000em;/*平滑的从头循环*/
+}
+.review ol li{
+	float:left; 
+	width: 180px;
+	position: relative;
+}
+.list-none .shadow{ 
+	position:absolute;
+	width:165px;	
+	height:110px;	
+	margin-left: 7px;
+	margin-top: 7px;
+	background-color: rgb(217,217,217);
+	-webkit-border-radius: 5px; /*以下四句控制div圆角*/
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px; 
+	border-radius: 5px;
+}
+.list-none .image{ 
+	width:180px;	
+	height:120px;
+	margin-top: 4px;
+}
+.list-none .image a{  
+	width:165px;
+	height:110px;
+	overflow:hidden;
+	margin-left: 4px;
+	+margin-top: 4px;
+	position:absolute;
+}
+.list-none .image a:hover{
+	margin-left: 6px;
+	margin-top: 2px;
+	+margin-top: 6px;
+}
+.list-none .image a img{  
+	width:165px;
+	height:110px;
+	-webkit-border-radius: 5px; /*以下四句控制div圆角*/
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px; 
+	border-radius: 5px;
+	border: 0px;
+	position: absolute;
+}
+.list-none .link{	
+	text-align:center; 
+	height:30px;
+	line-height:13px;
+	margin-top: 5px;
+	padding-bottom: 8px;
+}
+.list-none .link a{
+	font-size: 12px;
+	text-decoration: none;
+	color:rgb(100,100,100);
+}
+.list-none .link a:hover{
+	color:blue;
+}

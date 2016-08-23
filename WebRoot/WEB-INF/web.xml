@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<servlet>
+		<servlet-name>ConnectorServlet</servlet-name>
+		<servlet-class>com.ckfinder.connector.ConnectorServlet</servlet-class>
+		<init-param>
+			<param-name>XMLConfig</param-name>
+			<param-value>/WEB-INF/config.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConnectorServlet</servlet-name>
+		<url-pattern>
+			/ckfinder/core/connector/java/connector.java
+		</url-pattern>
+	</servlet-mapping>
+	
+	 <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/struts-config.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <init-param>
+      <param-name>detail</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangeArea</servlet-name>
+    <servlet-class>com.robotcup.servlet.ChangeArea</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangeItem</servlet-name>
+    <servlet-class>com.robotcup.servlet.ChangeItem</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TeamApp</servlet-name>
+    <servlet-class>com.robotcup.servlet.TeamApp</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteItem</servlet-name>
+    <servlet-class>com.robotcup.servlet.DeleteItem</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangePwd</servlet-name>
+    <servlet-class>com.robotcup.servlet.ChangePwd</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckCode</servlet-name>
+    <servlet-class>com.robotcup.servlet.CheckCode</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindPwd</servlet-name>
+    <servlet-class>com.robotcup.servlet.FindPwd</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangeDoor</servlet-name>
+    <servlet-class>com.robotcup.servlet.ChangeDoor</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MangeItem</servlet-name>
+    <servlet-class>com.robotcup.servlet.MangeItem</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChgUniversity</servlet-name>
+    <servlet-class>com.robotcup.servlet.ChgUniversity</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangeArea</servlet-name>
+    <url-pattern>/ChangeArea</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangeItem</servlet-name>
+    <url-pattern>/ChangeItem</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TeamApp</servlet-name>
+    <url-pattern>/TeamApp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteItem</servlet-name>
+    <url-pattern>/DeleteItem</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangePwd</servlet-name>
+    <url-pattern>/ChangePwd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckCode</servlet-name>
+    <url-pattern>/CheckCode</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindPwd</servlet-name>
+    <url-pattern>/FindPwd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangeDoor</servlet-name>
+    <url-pattern>/ChangeDoor</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MangeItem</servlet-name>
+    <url-pattern>/MangeItem</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChgUniversity</servlet-name>
+    <url-pattern>/ChgUniversity</url-pattern>
+  </servlet-mapping>
+  <!-- 过滤器，处理乱码 -->
+  <filter>
+  	<filter-name>SetCodeFilter</filter-name>
+  	<filter-class>com.robotcup.filter.SetCodeFilter</filter-class>
+  </filter>
+ <filter-mapping>
+  	<filter-name>SetCodeFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+   <!-- 过滤器，判断session是否过期 -->
+  <filter>
+  	<filter-name>LoginFilter</filter-name>
+  	<filter-class>com.robotcup.filter.LoginFilter</filter-class>
+  </filter>
+ <filter-mapping>
+  	<filter-name>LoginFilter</filter-name>
+  	<url-pattern>*.do</url-pattern>
+  </filter-mapping>
+
+	<!-- 指定spring的配置文件，默认从web根目录寻找配置文件，我们可以通过spring提供的classpath:前缀指定从类路径下寻找 -->
+<context-param>
+   <param-name>contextConfigLocation</param-name>
+   <param-value>classpath:applicationContext.xml</param-value>
+</context-param>
+<!-- 对Spring容器进行实例化 -->
+<listener>
+      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+
+	  <filter>
+        <filter-name>OpenSessionInViewFilter</filter-name>
+        <filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	        <filter-name>OpenSessionInViewFilter</filter-name>
+	        <url-pattern>/*</url-pattern>
+	</filter-mapping>	
+	<filter>
+		<filter-name>FileUploadFilter</filter-name>
+		<filter-class>com.ckfinder.connector.FileUploadFilter</filter-class>
+                <init-param>
+                    <param-name>sessionCookieName</param-name>
+                    <param-value>JSESSIONID</param-value>
+                </init-param>
+                <init-param>
+                    <param-name>sessionParameterName</param-name>
+                    <param-value>jsessionid</param-value>
+                </init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>FileUploadFilter</filter-name>
+		<url-pattern>
+			/ckfinder/core/connector/java/connector.java
+     	 </url-pattern>
+	</filter-mapping>
+	<session-config>
+		<session-timeout>10</session-timeout>
+	</session-config>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
